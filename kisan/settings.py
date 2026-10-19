@@ -50,20 +50,28 @@ if not SECRET_KEY:
             "Set the SECRET_KEY environment variable before starting the application."
         )
 
-# ALLOWED_HOSTS - restrict in production
+# Render hostname (optional for local development)
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+
+# ALLOWED_HOSTS
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
     ALLOWED_HOSTS = []
-    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
     if RENDER_EXTERNAL_HOSTNAME:
         ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-    # Add any additional hosts from env (comma-separated)
+
     extra_hosts = os.environ.get('ALLOWED_HOSTS', '')
     if extra_hosts:
-        ALLOWED_HOSTS.extend([h.strip() for h in extra_hosts.split(',') if h.strip()])
+        ALLOWED_HOSTS.extend(
+            [h.strip() for h in extra_hosts.split(',') if h.strip()]
+        )
+
     if not ALLOWED_HOSTS:
-        raise ValueError("ALLOWED_HOSTS must be configured in production. Set RENDER_EXTERNAL_HOSTNAME or ALLOWED_HOSTS environment variable.")
+        raise ValueError(
+            "ALLOWED_HOSTS must be configured in production. "
+            "Set RENDER_EXTERNAL_HOSTNAME or ALLOWED_HOSTS."
+        )
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.onrender.com',
