@@ -1,0 +1,89 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Database
+*.sqlite3
+*.sqlite3-journal
+
+# Static files
+staticfiles/
+static/
+
+# Media files
+media/
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Django
+*.mo
+*.pot
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+
+# Pytest
+.pytest_cache/
+
+# Render deployment
+build.sh
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Security - credentials and config
+.env
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+secrets.yml
+config/secrets.yml
+
+# Editor and session files
+$HOME/
+*.swp
+*.swo
+*~
+
+# Local settings overrides
+kisan/settings.local.py
+kisan/local_settings.py
+
+# Zip archives and backups
+*.zip
+
+# Claude configuration
+.claude-omniroute/
+.claude/
+
+# Temporary files
+*.tmp
+*.temp
+D:Krishaka/
+Mitram*/

@@ -763,4 +763,5 @@ Copyright (c) 2026 Pannaga G Bhat
 - **KVK Brahmavar / Mangaluru:** https://kvk.icar.gov.in
 - **Soil Health Card Scheme:** https://soilhealth.dac.gov.in
 #   k r i s h a k a  
+ #   k r i s h a k a  
  
