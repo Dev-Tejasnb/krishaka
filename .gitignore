@@ -85,3 +85,6 @@ kisan/local_settings.py
 *.temp
 D:Krishaka/
 Mitram*/
+
+# Render Yaml
+render.yaml
